@@ -24,7 +24,7 @@ const Editor: FC<IEditor> = ({ lang, code, setCode }) => {
       </button>
       {isOpened && (
         <CodeMirror
-          onChange={(editor, data, value) => setCode(value)}
+          onChange={(_editor, _data, value) => setCode(value)}
           options={{
             mode: lang === "html" ? "xml" : lang,
             theme: "material",
